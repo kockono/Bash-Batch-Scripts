@@ -18,14 +18,14 @@ procesar_opcion() {
     case $opcion in
         1)
             echo "What is the table name for migration ?"
-            read $nameTable
-            echo $("dotnet ef migrations add "Add$nameTable\Table" --startup-project ../Delta.Api")
+            read nameTable
+            echo $(dotnet ef migrations add "Add$nameTable\Table" --startup-project ../Delta.Api)
             ;;
         2)
             echo "What is the table name for migration ?"
-            read $nameTable
-            echo $("dotnet ef migrations add "Add$nameTable\Table" --startup-project ../Delta.Api")
-            echo $("dotnet ef database update --startup-project ../Delta.api")
+            read nameTable
+            echo $(dotnet ef migrations add "Add$nameTable\Table" --startup-project ../Delta.Api)
+            echo $(dotnet ef database update --startup-project ../Delta.api)
             ;;
         3)
             echo "Has seleccionado la opción 3"

@@ -19,33 +19,33 @@ procesar_opcion() {
     case $opcion in
         1)
             echo "Nombre del componente ?"
-            read $nameComponent
-            echo $("ng g c components/$nameComponent")
+            read nameComponent
+            echo $(ng g c components/$nameComponent)
             ;;
         2)
             echo "Nombre del servicio ?"
-            read $nameService
-            echo $("ng g s services/$nameService")
+            read nameService
+            echo $(ng g s services/$nameService)
             ;;
         3)
             echo "Nombre del guard ?"
-            read $nameGuard
-            echo $("ng g guard guards/$nameGuard")
+            read nameGuard
+            echo $(ng g guard guards/$nameGuard)
             ;;
         4)
             echo "Nombre de la vista (view) ?"
-            read $nameView
-            echo $("ng g c views/$nameView")
+            read nameView
+            echo $(ng g c views/$nameView)
             ;;
         5)
             echo "Nombre del pipe ?"
             read $namePipe
-            echo $("ng g pipe pipes/$namePipe")
+            echo $(ng g pipe pipes/$namePipe)
             ;;
         6)
             echo "Nombre de la directiva ?"
             read $nameDirective
-            echo $("ng g directive directives/$nameDirective")
+            echo $(ng g directive directives/$nameDirective)
             ;;
         7)
             echo "Saliendo del programa..."
