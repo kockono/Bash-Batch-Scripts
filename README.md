@@ -4,7 +4,7 @@
 
 #### For Mac Users
 ```sh
-cp .NetCore /usr/local/bin/netc & cp Angular /usr/local/bin/ng
+cp .NetCore /usr/local/bin/netc & cp Angular /usr/local/bin/ngcc
 ```
 
 #### For windows users
