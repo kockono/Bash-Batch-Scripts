@@ -1,15 +1,15 @@
 # Windows
-#! /usr/bin/bash 
+#! /usr/bin/bash
 # Linux
 #!/bin/bash
 
 # Función para mostrar el menú
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "1. MakeMigration"
-    echo "2. MakeMigration and UpdateDatabase" 
-    echo "3. Test"
-    echo "4. Salir"
+    echo "1. Make Migration Table"
+    echo "2. Make Migration and UpdateDatabase"
+    echo "3. Make Migration For Add Column On Table"
+    echo "q. Salir"
 }
 
 # Función para procesar la opción seleccionada
@@ -19,19 +19,22 @@ procesar_opcion() {
         1)
             echo "What is the table name for migration ?"
             read nameTable
-            echo $(dotnet ef migrations add "Add$nameTable\Table" --startup-project ../Delta.Api)
+            echo $(dotnet ef migrations add "Add${nameTable}Table" --startup-project ../Delta.Api)
             ;;
         2)
             echo "What is the table name for migration ?"
             read nameTable
-            echo $(dotnet ef migrations add "Add$nameTable\Table" --startup-project ../Delta.Api)
+            echo $(dotnet ef migrations add "Add${nameTable}Table" --startup-project ../Delta.Api)
             echo $(dotnet ef database update --startup-project ../Delta.api)
             ;;
         3)
-            echo "Has seleccionado la opción 3"
-            # Agrega aquí el código para la opción 3
+            echo "What is the column name for migration ?"
+            read nameColumn
+            echo "What is the name for the table"
+            read tableName
+            echo $(dotnet ef migrations add "AddColumn${nameColumn}ToTable${tableName}" --startup-project ../Delta.Api)
             ;;
-        4)
+        q)
             echo "Saliendo del programa..."
             exit 0
             ;;
