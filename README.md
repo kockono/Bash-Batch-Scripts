@@ -3,10 +3,11 @@
 2. Angular
 
 #### For Mac Users
-´´´sh
-cp .NetCore /usr/local/bin/netc & cp Angular /usr/local/bin/ngc
-´´´
+```sh
+cp .NetCore /usr/local/bin/netc & cp Angular /usr/local/bin/ng
+```
+
 #### For windows users
-´´´sh
+```sh
 copy .Netcore $PATH=""
-´´´
+```
