@@ -30,7 +30,7 @@ procesar_opcion() {
         3)
             echo "What is the column name for migration ?"
             read nameColumn
-            echo "What is the name for the table"
+            echo "What is the table name for migration ?"
             read tableName
             echo $(dotnet ef migrations add "AddColumn${nameColumn}ToTable${tableName}" --startup-project ../Delta.Api)
             ;;
