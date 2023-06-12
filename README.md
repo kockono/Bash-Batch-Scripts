@@ -6,7 +6,7 @@
 ```sh
 cp .NetCore /usr/local/bin/netc & cp Angular /usr/local/bin/ngcc
 ```
-
+Use netc for ```netcore```, ```ngcc``` for angular
 #### For windows users
 ```sh
 copy .Netcore $PATH=""
