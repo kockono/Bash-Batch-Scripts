@@ -15,7 +15,7 @@ echo q. Salir
 set /p opcion=Selecciona una opcion:
 
 if "%opcion%"=="a" (
-    set /p commitName=¿ Nombre del commit ?
+    set /p commitName=Nombre del commit: 
     git add . && git commit -m "%commitName%" && git push
 ) else if "%opcion%"=="1" (
     set /p numeroCommits=¿Numero de commits a reiniciar?
