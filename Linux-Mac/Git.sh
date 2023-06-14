@@ -6,6 +6,7 @@
 # Función para mostrar el menú
 mostrar_menu() {
     echo "Menú de opciones:"
+    echo "a. Crear Commit de todos los cambios y push                : git add . ^&^& git commit -m "CommitName" ^&^& git push"
     echo "1. Reiniciar numero de commits                             : git reset --hard Head~$"
     echo "2. Eliminar archivos de git cache (.vscode, bin, obj)      : git rm --cached . -rf"
     echo "3. Encontrar un git en especifico senstive case            : git log --all --oneline --grep='gitName'"
@@ -19,6 +20,11 @@ mostrar_menu() {
 procesar_opcion() {
     local opcion=$1
     case $opcion in
+        a)
+            echo "¿ nombre del commit ?"
+            read commitName
+            echo $(git add . && git commit -m "${commitName}" && git push)
+            ;;
         1)
             echo "¿ numero de commits a reiniciar ?"
             read nubmerCommits

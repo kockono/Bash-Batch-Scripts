@@ -2,6 +2,7 @@
 
 :menu
 echo Menu de opciones:
+echo a. Crear Commit de todos los cambios y push                : git add . ^&^& git commit -m "CommitName" ^&^& git push
 echo 1. Reiniciar numero de commits                             : git reset --hard Head~$
 echo 2. Eliminar archivos de git cache [.vscode, bin, obj]      : git rm --cached . -rf
 echo 3. Encontrar un git en especifico case sensitive           : git log --all --oneline --grep='gitName'
@@ -13,7 +14,10 @@ echo q. Salir
 @REM Opcion para leer escritura de teclado
 set /p opcion=Selecciona una opcion:
 
-if "%opcion%"=="1" (
+if "%opcion%"=="a" (
+    set /p commitName=¿ Nombre del commit ?
+    git add . && git commit -m "%commitName%" && git push
+) else if "%opcion%"=="1" (
     set /p numeroCommits=¿Numero de commits a reiniciar?
     git reset --hard HEAD~%numeroCommits%
 ) else if "%opcion%"=="2" (
