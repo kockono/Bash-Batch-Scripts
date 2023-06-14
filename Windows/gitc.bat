@@ -2,7 +2,7 @@
 
 @REM Valida que el argumento no este vacio
 if not "%1"=="" (
-    git add . && git commit -m "%1" && git push
+    git add . && git commit -m "%1 %2 %3 %4 %5 %6 %7 %8 %9" && git push
     exit /b
 ) else (
     :menu
