@@ -7,7 +7,11 @@
     - Netcore (netc)
     - Angular (ngc)
     - Git (gitc)
-#### Mac/Linux Users
+
+```sh
+git clone https://github.com/kockono/Bash-Scripts
+```
+### Mac/Linux Users
 ```sh
 cp NetCore.sh /usr/local/bin/netc & 
 cp Angular.sh /usr/local/bin/ngc &
@@ -16,7 +20,7 @@ cp Git.sh /usr/local/bin/gitc &
 ```
 Use ```netc``` for netcore, ```ngcc``` for angular
 
-#### Windows
+### Windows
 ```bat
 @echo off
 set "origen=%CD%"
