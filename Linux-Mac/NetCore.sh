@@ -6,9 +6,9 @@
 # Función para mostrar el menú
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "1. Make Migration Table"
-    echo "2. Make Migration and UpdateDatabase"
-    echo "3. Make Migration For Add Column On Table"
+    echo "1. Make Migration Table                   : dotnet ef migrations add \"AddnameTableTable\""
+    echo "2. Make Migration and UpdateDatabase      : dotnet ef migrations add \"AddnameTableTable\" & dotnet ef database update"
+    echo "3. Make Migration For Add Column On Table : dotnet ef migrations add \"AddColumnnameColumnToTabletableName\""
     echo "q. Salir"
 }
 

@@ -3,12 +3,12 @@
 # Función para mostrar el menú
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "1. Crear Componentes"
-    echo "2. Crear Servicios"
-    echo "3. Crear Guards"
-    echo "4. Crear Views"
-    echo "5. Crear Pipes"
-    echo "6. Crear Directivas"
+    echo "1. Crear Componentes : ng g c components/nameComponent"
+    echo "2. Crear Servicios   : ng g s services/nameService"
+    echo "3. Crear Guards      : ng g guard guards/nameGuard"
+    echo "4. Crear Views       : ng g c views/nameView"
+    echo "5. Crear Pipes       : ng g p pipes/namePipe"
+    echo "6. Crear Directivas  : ng g d directives/nameDirective"
     echo "7. Salir"
     
 }

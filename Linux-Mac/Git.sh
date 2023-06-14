@@ -6,12 +6,12 @@
 # Función para mostrar el menú
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "1. Reiniciar numero de commits"
-    echo "2. Eliminar archivos de git cache (.vscode, bin, obj, etc))"
-    echo "3. Encontrar un git en especifico senstive case"
-    echo "4. Ver historial de log de un archivo en especifico"
-    echo "5. Limpiar ramas locales"
-    echo "6. Retornar a un commit especifico sin crear rama temporal"
+    echo "1. Reiniciar numero de commits                             : git reset --hard Head~$"
+    echo "2. Eliminar archivos de git cache (.vscode, bin, obj)      : git rm --cached . -rf"
+    echo "3. Encontrar un git en especifico senstive case            : git log --all --oneline --grep='gitName'"
+    echo "4. Ver historial de log de un archivo en especifico        : git log -p --follow -- "fileName""
+    echo "5. Limpiar ramas locales                                   : git remote prune origin --dry-run"
+    echo "6. Retornar a un commit especifico sin crear rama temporal : git pull --allow-unrelated-histories --no-ff"
     echo "q. Salir"
 }
 
