@@ -17,8 +17,6 @@ if not "%1"=="" (
     echo q. Salir
 )
 
-
-
 @REM Opcion para leer escritura de teclado
 set /p opcion=Selecciona una opcion:
 
