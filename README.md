@@ -8,6 +8,7 @@
     - Angular (ngc)
     - Git (gitc)
 
+### Clone proyect
 ```sh
 git clone https://github.com/kockono/Bash-Scripts
 ```
