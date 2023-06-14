@@ -9,7 +9,7 @@ mostrar_menu() {
     echo "4. Crear Views       : ng g c views/nameView"
     echo "5. Crear Pipes       : ng g p pipes/namePipe"
     echo "6. Crear Directivas  : ng g d directives/nameDirective"
-    echo "7. Salir"
+    echo "q. Salir"
     
 }
 
@@ -47,7 +47,7 @@ procesar_opcion() {
             read $nameDirective
             echo $(ng g directive directives/$nameDirective)
             ;;
-        7)
+        q)
             echo "Saliendo del programa..."
             exit 0
             ;;

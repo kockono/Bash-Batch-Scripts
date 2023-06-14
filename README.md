@@ -19,7 +19,12 @@ cp Angular.sh /usr/local/bin/ngc &
 cp Git.sh /usr/local/bin/gitc &
 
 ```
-Use ```netc``` for netcore, ```ngcc``` for angular
+#### Darle permisos de ejecucion
+```sh
+chmod +x /usr/local/bin/netc
+```
+
+Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 
 ### Windows
 ```bat
