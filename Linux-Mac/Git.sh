@@ -4,6 +4,18 @@
 #!/bin/bash
 
 # Función para mostrar el menú
+
+commit_rapido()
+{
+    echo $(git add . && git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+}
+
+# Validar si se proporciona un parámetro al comando
+if [ $# -eq 1 ]; then
+    commit_rapido "$1"
+    exit 0
+fi
+
 mostrar_menu() {
     echo "Menú de opciones:"
     echo "a. Crear Commit de todos los cambios y push                : git add . ^&^& git commit -m "CommitName" ^&^& git push"
@@ -68,6 +80,7 @@ procesar_opcion() {
 }
 
 # Inicio del programa
+commit_rapido
 mostrar_menu
 read -p "Selecciona una opción: " opcion
 procesar_opcion $opcion
