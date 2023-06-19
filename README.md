@@ -42,3 +42,4 @@ echo Archivos movidos exitosamente.
 
 setx PATH "%PATH%;C:\commands"
 ```
+Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
