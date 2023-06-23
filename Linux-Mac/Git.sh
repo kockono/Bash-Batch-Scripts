@@ -4,18 +4,6 @@
 #!/bin/bash
 
 # Función para mostrar el menú
-
-commit_rapido()
-{
-    echo $(git add . && git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9" && git push)
-}
-
-# Validar si se proporciona un parámetro al comando
-if [ $# -eq 1 ]; then
-    commit_rapido "$1"
-    exit 0
-fi
-
 mostrar_menu() {
     echo "Menú de opciones:"
     echo "a. Crear Commit de todos los cambios y push                : git add . && git commit -m "CommitName" && git push"
@@ -33,9 +21,7 @@ procesar_opcion() {
     local opcion=$1
     case $opcion in
         a)
-            echo "¿ nombre del commit ?"
-            read commitName
-            echo $(git add . && git commit -m "${commitName}" && git push)
+            opciones_commits
             ;;
         1)
             echo "¿ numero de commits a reiniciar ?"
@@ -79,8 +65,50 @@ procesar_opcion() {
     esac
 }
 
+opciones_commits() {
+    local opcion2=$1
+    case $opcion in
+        a)
+            echo "Feature"
+            read commitName
+            echo $(git add . && git commit -m "feat: :sparkles: ${commitName}" && git push)
+            ;;
+        1)
+            echo "Fix"
+            read commitName  
+            echo $(git add . && git commit -m "fix: :bug: ${commitName}" && git push)
+            ;;
+        2)
+            echo "Documentation"
+            read commitName
+            echo $(git add . && git commit -m "docs: :memo: ${commitName}" && git push)
+            ;;
+        3)
+            echo "Test"
+            read commitName
+            echo $(git add . && git commit -m "test: :test_tube: ${commitName}" && git push)
+            ;;
+        4)
+            echo "Remove dead code"
+            read commitName
+            echo $(git add . && git commit -m "remove: :coffin: ${commitName}" && git push)
+            ;;
+        5)
+            echo "HotFix"
+            read commitName
+            echo $(git add . && git commit -m "hotfix: :ambulance: ${commitName}" && git push)
+            ;;
+        q)
+            echo "Saliendo del programa..."
+            exit 0
+            ;;
+        *)
+            echo "Opción inválida. Por favor, selecciona una opción válida."
+            ;;
+    esac
+}
+
 # Inicio del programa
-commit_rapido
 mostrar_menu
 read -p "Selecciona una opción: " opcion
 procesar_opcion $opcion
