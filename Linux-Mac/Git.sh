@@ -81,29 +81,72 @@ opciones_commits() {
         a)
             echo "Descripcion del Feature:"
             read commitName
-            echo $(git add . && git commit -m "feat: :sparkles: ${commitName}" && git push)
+            echo $(git add . && git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         1)
             echo "Descripcion del Fix"
             read commitName  
-            echo $(git add . && git commit -m "fix: :bug: ${commitName}" && git push)
+            echo $(git add . && git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         2)
             echo "Descripcion del Documentation"
             read commitName
-            echo $(git add . && git commit -m "docs: :memo: ${commitName}" && git push)
+            echo $(git add . && git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         3)
             echo "Descripcion del Test"
             read commitName
-            echo $(git add . && git commit -m "test: :test_tube: ${commitName}" && git push)
+            echo $(git add . && git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         4)
             echo "Descripcion del Remove dead code"
             read commitName
-            echo $(git add . && git commit -m "remove: :coffin: ${commitName}" && git push)
+            echo $(git add . && git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         5)
+            echo "Descripcion del HotFix"
+            read commitName
+            echo $(git add . && git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            ;;
+        q)
+            echo "Saliendo del programa..."
+            exit 0
+            ;;
+        *)
+            echo "Opción inválida. Por favor, selecciona una opción válida."
+            ;;
+    esac
+}
+
+fast_commit() {
+    local tipo_commit=$2
+    case $tipo_commit in
+        f)
+            echo "Descripcion del Feature:"
+            read commitName
+            echo $(git add . && git commit -m "feat: :sparkles: ${commitName}" && git push)
+            ;;
+        fix)
+            echo "Descripcion del Fix"
+            read commitName  
+            echo $(git add . && git commit -m "fix: :bug: ${commitName}" && git push)
+            ;;
+        d)
+            echo "Descripcion del Documentation"
+            read commitName
+            echo $(git add . && git commit -m "docs: :memo: ${commitName}" && git push)
+            ;;
+        t)
+            echo "Descripcion del Test"
+            read commitName
+            echo $(git add . && git commit -m "test: :test_tube: ${commitName}" && git push)
+            ;;
+        d)
+            echo "Descripcion del Remove dead code"
+            read commitName
+            echo $(git add . && git commit -m "remove: :coffin: ${commitName}" && git push)
+            ;;
+        h)
             echo "Descripcion del HotFix"
             read commitName
             echo $(git add . && git commit -m "hotfix: :ambulance: ${commitName}" && git push)
@@ -119,10 +162,20 @@ opciones_commits() {
 }
 
 # Validar si se proporciona un parámetro al comando
-if [ $# -eq 1 ]; then
-    sub_menu_a
-    exit 0
+if [[ $# -gt 2 ]]; then
+    fast_commit 
+else
+
+    # if [ $# -eq 1 ]; then
+    #     sub_menu_a
+    #     exit 0
+    # else
+  procesar_opcion "$opcion"
+    # echo
+    # fi
 fi
+
+
 # Inicio del programa
 mostrar_menu
 read -p "Selecciona una opción: " opcion
