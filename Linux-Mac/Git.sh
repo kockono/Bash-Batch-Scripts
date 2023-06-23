@@ -18,7 +18,7 @@ fi
 
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "a. Crear Commit de todos los cambios y push                : git add . ^&^& git commit -m "CommitName" ^&^& git push"
+    echo "a. Crear Commit de todos los cambios y push                : git add . && git commit -m "CommitName" && git push"
     echo "1. Reiniciar numero de commits                             : git reset --hard Head~$"
     echo "2. Eliminar archivos de git cache (.vscode, bin, obj)      : git rm --cached . -rf"
     echo "3. Encontrar un git en especifico senstive case            : git log --all --oneline --grep='gitName'"
@@ -40,7 +40,7 @@ procesar_opcion() {
         1)
             echo "¿ numero de commits a reiniciar ?"
             read nubmerCommits
-            echo $(git reset --hard Head~${nubmerCommits}})
+            echo $(git reset --hard Head~${nubmerCommits})
             ;;
         2)
             echo $(git rm --cached . -rf)
