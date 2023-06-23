@@ -3,57 +3,52 @@
 # Linux
 #!/bin/bash
 
-# Función para mostrar el menú
+# Función para mostrar el menú principal
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "a. Crear Commit de todos los cambios y push                : git add . && git commit -m "CommitName" && git push"
-    echo "1. Reiniciar numero de commits                             : git reset --hard Head~$"
+    echo "a. Crear Commit de todos los cambios y push                : git add . && git commit -m 'CommitName' && git push"
+    echo "1. Reiniciar número de commits                             : git reset --hard HEAD~\$numberCommits"
     echo "2. Eliminar archivos de git cache (.vscode, bin, obj)      : git rm --cached . -rf"
-    echo "3. Encontrar un git en especifico senstive case            : git log --all --oneline --grep='gitName'"
-    echo "4. Ver historial de log de un archivo en especifico        : git log -p --follow -- "fileName""
+    echo "3. Encontrar un git en específico sensitive case           : git log --all --oneline --grep='gitName'"
+    echo "4. Ver historial de log de un archivo en específico        : git log -p --follow -- 'fileName'"
     echo "5. Limpiar ramas locales                                   : git remote prune origin --dry-run"
-    echo "6. Retornar a un commit especifico sin crear rama temporal : git pull --allow-unrelated-histories --no-ff"
+    echo "6. Retornar a un commit específico sin crear rama temporal : git pull --allow-unrelated-histories --no-ff"
     echo "q. Salir"
 }
 
-# Función para procesar la opción seleccionada
+# Función para procesar la opción seleccionada del menú principal
 procesar_opcion() {
     local opcion=$1
     case $opcion in
         a)
-            opciones_commits
+            sub_menu_a
             ;;
         1)
-            echo "¿ numero de commits a reiniciar ?"
-            read nubmerCommits
-            echo $(git reset --hard Head~${nubmerCommits})
+            echo "¿Número de commits a reiniciar?"
+            read numberCommits
+            echo "$(git reset --hard HEAD~$numberCommits)"
             ;;
         2)
-            echo $(git rm --cached . -rf)
+            echo "$(git rm --cached . -rf)"
             ;;
         3)
-            echo "nombre del commit a buscar senstive case"
+            echo "Nombre del commit a buscar (sensitive case)"
             read gitName
-            echo $(git log --all --oneline --grep=\'${gitName}\')
+            echo "$(git log --all --oneline --grep='$gitName')"
             ;;
         4)
             echo "Introduzca el nombre del archivo para ver su historial"
             read fileName
-            echo $(git log -p --follow -- ${fileName})
+            echo "$(git log -p --follow -- $fileName)"
             ;;
         5)
-            echo "Ramas limpiadas con exito"
-            echo $(git remote prune origin --dry-run)
+            echo "Ramas limpiadas con éxito"
+            echo "$(git remote prune origin --dry-run)"
             ;;
         6)
             echo ""
             read gitName
-            echo $(git pull --allow-unrelated-histories --no-ff)
-            ;;
-        6)
-            echo "Introduzca el commit id a regresar la rama"
-            read commitId
-            echo $(git reset --hard ${commitId} && git clean -f)
+            echo "$(git pull --allow-unrelated-histories --no-ff)"
             ;;
         q)
             echo "Saliendo del programa..."
@@ -65,36 +60,51 @@ procesar_opcion() {
     esac
 }
 
+# Función para mostrar el submenú de opciones de commits
+sub_menu_a() {
+    echo "Submenú - Opciones de commits:"
+    echo "a. Feature"
+    echo "1. Fix"
+    echo "2. Documentation"
+    echo "3. Test"
+    echo "4. Remove dead code"
+    echo "5. HotFix"
+    echo "q. Regresar al menú principal"
+
+    read -p "Selecciona una opción: " opcion_commit
+    opciones_commits $opcion_commit
+}
+
 opciones_commits() {
-    local opcion2=$1
-    case $opcion in
+    local tipo_commit=$1
+    case $tipo_commit in
         a)
-            echo "Feature"
+            echo "Descripcion del Feature:"
             read commitName
             echo $(git add . && git commit -m "feat: :sparkles: ${commitName}" && git push)
             ;;
         1)
-            echo "Fix"
+            echo "Descripcion del Fix"
             read commitName  
             echo $(git add . && git commit -m "fix: :bug: ${commitName}" && git push)
             ;;
         2)
-            echo "Documentation"
+            echo "Descripcion del Documentation"
             read commitName
             echo $(git add . && git commit -m "docs: :memo: ${commitName}" && git push)
             ;;
         3)
-            echo "Test"
+            echo "Descripcion del Test"
             read commitName
             echo $(git add . && git commit -m "test: :test_tube: ${commitName}" && git push)
             ;;
         4)
-            echo "Remove dead code"
+            echo "Descripcion del Remove dead code"
             read commitName
             echo $(git add . && git commit -m "remove: :coffin: ${commitName}" && git push)
             ;;
         5)
-            echo "HotFix"
+            echo "Descripcion del HotFix"
             read commitName
             echo $(git add . && git commit -m "hotfix: :ambulance: ${commitName}" && git push)
             ;;
