@@ -118,6 +118,11 @@ opciones_commits() {
     esac
 }
 
+# Validar si se proporciona un parámetro al comando
+if [ $# -eq 1 ]; then
+    sub_menu_a
+    exit 0
+fi
 # Inicio del programa
 mostrar_menu
 read -p "Selecciona una opción: " opcion
