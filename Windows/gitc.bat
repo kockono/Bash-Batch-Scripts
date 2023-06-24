@@ -12,7 +12,7 @@ if "%tipo_commit%"=="f" (
     git commit -m "fix(%2): :bug: %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="d" (
     echo Documentation:
-    git commit -m "docs: :memo: %3 %4 %5 %6 %7 %8 %9" && git push
+    git commit -m "docs(%2): :memo: %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="t" (
     echo Test:
     git commit -m "test(%2): :test_tube: %3 %4 %5 %6 %7 %8 %9" && git push

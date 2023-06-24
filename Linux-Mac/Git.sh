@@ -82,32 +82,32 @@ opciones_commits() {
         a)
             echo "Descripcion del Feature:"
             read commitName
-            echo $(git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "feat($2): :sparkles: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         1)
             echo "Descripcion del Fix"
             read commitName  
-            echo $(git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "fix($2): :bug: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         2)
             echo "Descripcion del Documentation"
             read commitName
-            echo $(git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "docs($2): :memo: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         3)
             echo "Descripcion del Test"
             read commitName
-            echo $(git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "test($2): :test_tube: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         4)
             echo "Descripcion del Remove dead code"
             read commitName
-            echo $(git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "remove($2): :coffin: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         5)
             echo "Descripcion del HotFix"
             read commitName
-            echo $(git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "hotfix($2): :ambulance: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
