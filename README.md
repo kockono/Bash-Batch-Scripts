@@ -44,7 +44,7 @@ setx PATH "%PATH%;C:\commands"
 ```
 Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 
-### Ejemplos de uso de git
+### Ejemplos de uso de gitc
 | Git Command               | Descripción              |
 |---------------------------|--------------------------|
 | `gitc f description_commit`| ✨ feature             |
