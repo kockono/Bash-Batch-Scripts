@@ -47,21 +47,21 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 ### Ejemplos de uso de gitc
 | Git Command               | Descripción              |
 |---------------------------|--------------------------|
-| `gitc f description_commit`| ✨ feature             |
-| `gitc t description_commit`| 🧪 test                |
-| `gitc a description_commit`| 🚑 ambulance           |
-| `gitc b description_commit`| 🐛 bug                 |
-| `gitc d description_commit`| 📝 documentation       |
-| `gitc r description_commit`| ⚰️ deadcode            |
+| `gitc f contexto description_commit`| ✨ feature             |
+| `gitc t contexto description_commit`| 🧪 test                |
+| `gitc a contexto description_commit`| 🚑 ambulance           |
+| `gitc b contexto description_commit`| 🐛 bug                 |
+| `gitc d contexto description_commit`| 📝 documentation       |
+| `gitc r contexto description_commit`| ⚰️ deadcode            |
 
 #### Feature
 ```sh
-gitc f implementacion de commits rapidos
+gitc f scripts implementacion de commits rapidos
 ```
-```Output: git add . && git commit -m "feat: ✨ commits rapidos y bonitos" && git push```
+```Output: git add . && git commit -m "feat(scripts): ✨ commits rapidos y bonitos" && git push```
 
 #### Test
 ```sh
-gitc t prueba unitaria de descuentos
+gitc t descuentos prueba unitarias
 ```
-```Output: git add . && git commit -m "test: 🧪 prueba unitaria de descuentos" && git push```
+```Output: git add . && git commit -m "test(descuentos): 🧪 prueba unitaria de descuentos" && git push```
