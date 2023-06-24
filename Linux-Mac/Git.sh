@@ -119,14 +119,14 @@ opciones_commits() {
 }
 
 fast_commit() {
-    local tipo_commit=$2
+    local tipo_commit=$1
     case $tipo_commit in
         f)
             echo "Descripcion del Feature:"
             read commitName
             echo $(git add . && git commit -m "feat: :sparkles: ${commitName}" && git push)
             ;;
-        fix)
+        fx)
             echo "Descripcion del Fix"
             read commitName  
             echo $(git add . && git commit -m "fix: :bug: ${commitName}" && git push)
@@ -161,18 +161,17 @@ fast_commit() {
     esac
 }
 
-# Validar si se proporciona un parámetro al comando
+# Valida sí tiene mas de 2 argumentos
 if [[ $# -gt 2 ]]; then
     fast_commit 
 else
-
-    # if [ $# -eq 1 ]; then
-    #     sub_menu_a
-    #     exit 0
-    # else
-  procesar_opcion "$opcion"
-    # echo
-    # fi
+    if [ $# -eq 1 ]; then
+        sub_menu_a
+        exit 0
+    else
+      procesar_opcion "$opcion"
+       echo
+    fi
 fi
 
 
