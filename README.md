@@ -17,8 +17,8 @@ git clone https://github.com/kockono/Bash-Scripts
 sudo cp NetCore.sh /usr/local/bin/netc & 
 cp Angular.sh /usr/local/bin/ngc &
 cp Git.sh /usr/local/bin/gitc &
-
 ```
+
 #### Darle permisos de ejecucion
 ```sh
 chmod +x /usr/local/bin/nombre_del_script
