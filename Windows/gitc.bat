@@ -2,8 +2,8 @@
 
 REM Función fast_commit
 :fast_commit
+git pull
 set tipo_commit=%1
-echo git pull
 if "%tipo_commit%"=="f" (
     echo Feature:
     git add . && git commit -m "feat: :sparkles: %2 %3 %4 %5 %6 %7 %8 %9" && git push
