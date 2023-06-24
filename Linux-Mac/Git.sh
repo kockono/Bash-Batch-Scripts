@@ -144,7 +144,11 @@ fast_commit() {
             ;;
         h)
             echo "Descripcion del HotFix"
-            echo $(git add . && git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "hotfix: 🚑 $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            ;;
+        s)
+            echo "Descripcion del Style"
+            echo $(git add . && git commit -m "style: 💄 $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
