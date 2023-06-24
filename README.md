@@ -47,7 +47,19 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 ### Ejemplos de uso de git
 | Git Command               | Descripción              |
 |---------------------------|--------------------------|
-| `gitc f description_commit`|  feature    |
-| `gitc t description_commit`|  test       |
-| `gitc h description_commit`|  hotfix     |
+| `gitc f description_commit`| ✨ feature             |
+| `gitc t description_commit`| 🧪 test                |
+| `gitc a description_commit`| 🚑 ambulance           |
+| `gitc b description_commit`| 🐛 bug                 |
+| `gitc d description_commit`| 📝 documentation       |
+| `gitc r description_commit`| ⚰️ deadcode            |
 
+#### Feature
+```sh
+gitc f implementacion de commits rapidos
+```
+#### Test
+```sh
+gitc t prueba unitaria de descuentos
+```
+```Output: git add . && git commit -m "test: 🧪 prueba unitaria de descuentos" && git push```
