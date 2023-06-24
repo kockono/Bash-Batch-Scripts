@@ -124,32 +124,32 @@ fast_commit() {
         f)
             echo "Descripcion del Feature:"
             read commitName
-            echo $(git add . && git commit -m "feat: :sparkles: ${commitName}" && git push)
+            echo $(git add . && git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         fx)
             echo "Descripcion del Fix"
             read commitName  
-            echo $(git add . && git commit -m "fix: :bug: ${commitName}" && git push)
+            echo $(git add . && git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         d)
             echo "Descripcion del Documentation"
             read commitName
-            echo $(git add . && git commit -m "docs: :memo: ${commitName}" && git push)
+            echo $(git add . && git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         t)
             echo "Descripcion del Test"
             read commitName
-            echo $(git add . && git commit -m "test: :test_tube: ${commitName}" && git push)
+            echo $(git add . && git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         d)
             echo "Descripcion del Remove dead code"
             read commitName
-            echo $(git add . && git commit -m "remove: :coffin: ${commitName}" && git push)
+            echo $(git add . && git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         h)
             echo "Descripcion del HotFix"
             read commitName
-            echo $(git add . && git commit -m "hotfix: :ambulance: ${commitName}" && git push)
+            echo $(git add . && git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
