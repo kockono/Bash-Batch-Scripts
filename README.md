@@ -1,8 +1,8 @@
 # Bash-Bat-Scripts
 - [Mac/Linux](#Mac/Linux-Users)
-    - Netcore
-    - Angular
-    - Git
+    - Netcore(netc)
+    - Angular (ngc)
+    - Git (gitc)
 - [Windows](#Windows)
     - Netcore (netc)
     - Angular (ngc)
