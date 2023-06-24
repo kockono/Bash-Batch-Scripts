@@ -77,36 +77,37 @@ sub_menu_a() {
 
 opciones_commits() {
     local tipo_commit=$1
+    echo $(git add .)
     case $tipo_commit in
         a)
             echo "Descripcion del Feature:"
             read commitName
-            echo $(git add . && git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         1)
             echo "Descripcion del Fix"
             read commitName  
-            echo $(git add . && git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         2)
             echo "Descripcion del Documentation"
             read commitName
-            echo $(git add . && git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         3)
             echo "Descripcion del Test"
             read commitName
-            echo $(git add . && git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         4)
             echo "Descripcion del Remove dead code"
             read commitName
-            echo $(git add . && git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         5)
             echo "Descripcion del HotFix"
             read commitName
-            echo $(git add . && git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
