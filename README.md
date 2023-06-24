@@ -53,6 +53,7 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc b contexto description_commit`| 🐛 bug                 |
 | `gitc d contexto description_commit`| 📝 documentation       |
 | `gitc r contexto description_commit`| ⚰️ deadcode            |
+| `gitc r contexto description_commit`| 💄 style               |
 
 #### Feature
 ```sh
