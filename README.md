@@ -17,8 +17,8 @@ git clone https://github.com/kockono/Bash-Scripts
 sudo cp NetCore.sh /usr/local/bin/netc & 
 cp Angular.sh /usr/local/bin/ngc &
 cp Git.sh /usr/local/bin/gitc &
-
 ```
+
 #### Darle permisos de ejecucion
 ```sh
 chmod +x /usr/local/bin/nombre_del_script
@@ -53,6 +53,7 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc b contexto description_commit`| 🐛 bug                 |
 | `gitc d contexto description_commit`| 📝 documentation       |
 | `gitc r contexto description_commit`| ⚰️ deadcode            |
+| `gitc r contexto description_commit`| 💄 style               |
 
 #### Feature
 ```sh
