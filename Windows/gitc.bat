@@ -2,7 +2,7 @@
 
 REM Función fast_commit
 :fast_commit
-git pull && git add .
+git add .
 set tipo_commit=%1
 if "%tipo_commit%"=="f" (
     echo Feature:
