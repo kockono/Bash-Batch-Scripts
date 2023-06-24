@@ -43,3 +43,11 @@ echo Archivos movidos exitosamente.
 setx PATH "%PATH%;C:\commands"
 ```
 Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
+
+### Ejemplos de uso de git
+| Git Command               | Descripción              |
+|---------------------------|--------------------------|
+| `gitc f description_commit`|  feature    |
+| `gitc t description_commit`|  test       |
+| `gitc h description_commit`|  hotfix     |
+
