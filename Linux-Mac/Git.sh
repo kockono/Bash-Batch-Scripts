@@ -117,38 +117,32 @@ opciones_commits() {
             ;;
     esac
 }
-
+<>
 fast_commit() {
     local tipo_commit=$1
     case $tipo_commit in
         f)
             echo "Descripcion del Feature:"
-            read commitName
             echo $(git add . && git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         fx)
-            echo "Descripcion del Fix"
-            read commitName  
+            echo "Descripcion del Fix"  
             echo $(git add . && git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         d)
             echo "Descripcion del Documentation"
-            read commitName
             echo $(git add . && git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         t)
             echo "Descripcion del Test"
-            read commitName
             echo $(git add . && git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
-        d)
+        r)
             echo "Descripcion del Remove dead code"
-            read commitName
             echo $(git add . && git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         h)
             echo "Descripcion del HotFix"
-            read commitName
             echo $(git add . && git commit -m "hotfix: :ambulance: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
