@@ -18,6 +18,8 @@ mostrar_menu() {
 
 # Función para procesar la opción seleccionada del menú principal
 procesar_opcion() {
+    mostrar_menu
+    read -p "Selecciona una opción: " opcion
     local opcion=$1
     case $opcion in
         a)
@@ -121,6 +123,8 @@ opciones_commits() {
 
 fast_commit() {
     local tipo_commit=$1
+    echo $1
+    echo "fast commit"
     case $tipo_commit in
         f)
             echo "Descripcion del Feature:"
@@ -160,23 +164,11 @@ fast_commit() {
     esac
 }
 
+# Inicio del programa
 # Valida sí tiene mas de 2 argumentos
-if [[ $# -gt 2 ]]; then
+if [ $# -gt 2 ]; then
     fast_commit 
 else
-    if [ $# -eq 1 ]; then
-        sub_menu_a
-        exit 0
-    else
-      procesar_opcion "$opcion"
-       echo
-    fi
+  procesar_opcion "$opcion"
+  echo
 fi
-
-
-# Inicio del programa
-mostrar_menu
-read -p "Selecciona una opción: " opcion
-procesar_opcion $opcion
-echo
-
