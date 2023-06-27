@@ -47,13 +47,13 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 ### Ejemplos de uso de gitc
 | Git Command               | Descripción              |
 |---------------------------|--------------------------|
-| `gitc f contexto description_commit`| ✨ feature             |
-| `gitc t contexto description_commit`| 🧪 test                |
-| `gitc a contexto description_commit`| 🚑 ambulance           |
-| `gitc b contexto description_commit`| 🐛 bug                 |
-| `gitc d contexto description_commit`| 📝 documentation       |
-| `gitc r contexto description_commit`| ⚰️ deadcode            |
-| `gitc r contexto description_commit`| 💄 style               |
+| `gitc f scope description_commit`| ✨ feature             |
+| `gitc t scope description_commit`| 🧪 test                |
+| `gitc a scope description_commit`| 🚑 ambulance           |
+| `gitc b scope description_commit`| 🐛 bug                 |
+| `gitc d scope description_commit`| 📝 documentation       |
+| `gitc r scope description_commit`| ⚰️ deadcode            |
+| `gitc r scope description_commit`| 💄 style               |
 
 #### Feature
 ```sh
