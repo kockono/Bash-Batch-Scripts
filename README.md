@@ -8,17 +8,18 @@
     - Angular (ngc)
     - Git (gitc)
 
-### Clone proyect
+## Clone proyect
 ```sh
 git clone https://github.com/kockono/Bash-Scripts
 ```
-### Mac/Linux Users
+## Mac/Linux Users
+#### 1. Copiar Archivo
 ```sh
 sudo cp Linux-Mac/Git.sh /usr/local/bin/gitc
 ```
 ###### Cambiar el ``gitc`` si requieres otro script
 
-#### Darle permisos de ejecucion
+#### 2. Darle permisos de ejecucion
 ```sh
 chmod +x /usr/local/bin/gitc 
 ```
