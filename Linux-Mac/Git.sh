@@ -61,37 +61,35 @@ procesar_opcion() {
 fast_commit() {
     local tipo_commit=$1
     local scope=$2
-    local description=$3
-    echo "$tipo_commit, $scope, $description"
-
+    local description_commit="$3 $4 $5 $6 $7 $8 $9"
     case $tipo_commit in
         f)
             echo "Descripcion del Feature:"
-            echo $(git add . && git commit -m "feat($scope): :sparkles: $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "feat($scope): :sparkles: $description_commit" && git push)
             ;;
         fx)
             echo "Descripcion del Fix"  
-            echo $(git add . && git commit -m "fix($scope): :bug: $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "fix($scope): :bug: $description_commit" && git push)
             ;;
         d)
             echo "Descripcion del Documentation"
-            echo $(git add . && git commit -m "docs($scope): :memo: $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "docs($scope): :memo: $description_commit" && git push)
             ;;
         t)
             echo "Descripcion del Test"
-            echo $(git add . && git commit -m "test($scope): :test_tube: $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "test($scope): :test_tube: $description_commit" && git push)
             ;;
         r)
             echo "Descripcion del Remove dead code"
-            echo $(git add . && git commit -m "remove($scope): :coffin: $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "remove($scope): :coffin: $description_commit" && git push)
             ;;
         h)
             echo "Descripcion del HotFix"
-            echo $(git add . && git commit -m "hotfix($scope): 🚑 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "hotfix($scope): 🚑 $description_commit" && git push)
             ;;
         s)
             echo "Descripcion del Style"
-            echo $(git add . && git commit -m "style($scope): 💄 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "style($scope): 💄 $description_commit" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
