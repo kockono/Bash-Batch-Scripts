@@ -16,14 +16,14 @@ git clone https://github.com/kockono/Bash-Scripts
 ```sh
 sudo cp Git.sh /usr/local/bin/gitc
 ```
-#### Cambiar el ``gitc`` si requieres otro script
+###### Cambiar el ``gitc`` si requieres otro script
 
 #### Darle permisos de ejecucion
 ```sh
 chmod +x /usr/local/bin/gitc 
 ```
 
-#### Cambiar el ``gitc`` si requieres darle permisos a otro script
+###### Cambiar el ``gitc`` si requieres darle permisos a otro script
 
 Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 
