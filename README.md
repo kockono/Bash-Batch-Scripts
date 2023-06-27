@@ -50,10 +50,10 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc f scope description_commit`| ✨ feature             |
 | `gitc t scope description_commit`| 🧪 test                |
 | `gitc a scope description_commit`| 🚑 ambulance           |
-| `gitc b scope description_commit`| 🐛 bug                 |
+| `gitc fx scope description_commit`| 🐛 bug                |
 | `gitc d scope description_commit`| 📝 documentation       |
-| `gitc r scope description_commit`| ⚰️ deadcode            |
-| `gitc r scope description_commit`| 💄 style               |
+| `gitc r scope description_commit`| ⚰️ deadcode             |
+| `gitc s scope description_commit`| 💄 style               |
 
 #### Feature
 ```sh
