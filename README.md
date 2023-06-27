@@ -57,6 +57,19 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc r scope description_commit`| ⚰️ deadcode             |
 | `gitc s scope description_commit`| 💄 style               |
 
+### Menu gitc
+```sh
+Menú de opciones:
+1. Regresar atras por número de commits anterior           : git reset --hard HEAD~\$numberCommits
+2. Eliminar archivos de git cache (.vscode, bin, obj)      : git rm --cached . -rf
+3. Encontrar un git en específico sensitive case           : git log --all --oneline --grep='gitName'
+4. Ver historial de log de un archivo en específico        : git log -p --follow -- 'fileName'
+5. Limpiar ramas locales                                   : git remote prune origin --dry-run
+6. Refusing to merge unrelated histories                   : git pull --allow-unrelated-histories --no-ff
+7. Retornar a un commit específico sin crear rama temporal : git checkout <commit-hash>
+q. Salir"
+```
+
 #### Feature
 ```sh
 gitc f scripts implementacion de commits rapidos
