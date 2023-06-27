@@ -16,7 +16,7 @@ if "%tipo_commit%"=="f" (
 ) else if "%tipo_commit%"=="t" (
     echo Test:
     git commit -m "test(%2): :test_tube: %3 %4 %5 %6 %7 %8 %9" && git push
-) else if "%tipo_commit%"=="d" (
+) else if "%tipo_commit%"=="r" (
     echo Remove dead code:
     git commit -m "remove(%2): :coffin: %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="h" (
