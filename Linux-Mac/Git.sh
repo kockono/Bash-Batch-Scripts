@@ -12,7 +12,7 @@ mostrar_menu() {
     echo "4. Ver historial de log de un archivo en específico        : git log -p --follow -- 'fileName'"
     echo "5. Limpiar ramas locales                                   : git remote prune origin --dry-run"
     echo "6. Refusing to merge unrelated histories                   : git pull --allow-unrelated-histories --no-ff"
-    echo "7. Retornar a un commit específico sin crear rama temporal : git checkout <commit-hash>"
+    echo "7. Retornar a un commit específico sin crear rama temporal : git log --oneline --max-count=5 && git checkout <commit-hash>"
     echo "q. Salir"
 }
 
@@ -20,7 +20,6 @@ mostrar_menu() {
 procesar_opcion() {
     mostrar_menu
     read -p "Selecciona una opción: " opcion
-    local opcion=$1
     case $opcion in
         1)
             echo "¿Número de commits a reiniciar?"
@@ -50,6 +49,7 @@ procesar_opcion() {
             ;;
         7)
             echo "Ingresa la id del commit al que quieres regresar"
+            echo "$(git log --oneline --max-count=5)"
             read idCommit
             echo "$(git checkout $idCommit )"
             ;;
