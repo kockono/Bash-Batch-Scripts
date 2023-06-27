@@ -31,7 +31,7 @@ procesar_opcion() {
             echo "$(git rm --cached . -rf)"
             ;;
         3)
-            echo "Nombre del commit a buscar (sensitive case)"
+            echo "Nombre del commit a buscar (sensitive case) Mayus, Minus, etc"
             read gitName
             echo "$(git log --all --oneline --grep='$gitName')"
             ;;
