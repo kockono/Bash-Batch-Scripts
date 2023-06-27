@@ -14,7 +14,7 @@ git clone https://github.com/kockono/Bash-Scripts
 ```
 ### Mac/Linux Users
 ```sh
-sudo cd Linux-Mac && cp Git.sh /usr/local/bin/gitc
+sudo cp Linux-Mac/Git.sh /usr/local/bin/gitc
 ```
 ###### Cambiar el ``gitc`` si requieres otro script
 
