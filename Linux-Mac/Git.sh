@@ -6,13 +6,14 @@
 # Función para mostrar el menú principal
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "1. Regresar atras por número de commits anterior           : git reset --hard HEAD~\$numberCommits"
-    echo "2. Eliminar archivos de git cache (.vscode, bin, obj)      : git rm --cached . -rf"
-    echo "3. Encontrar un git en específico sensitive case           : git log --all --oneline --grep='gitName'"
-    echo "4. Ver historial de log de un archivo en específico        : git log -p --follow -- 'fileName'"
-    echo "5. Limpiar ramas locales                                   : git remote prune origin --dry-run"
-    echo "6. Refusing to merge unrelated histories                   : git pull --allow-unrelated-histories --no-ff"
-    echo "7. Retornar a un commit específico sin crear rama temporal : git log --oneline --max-count=5 && git checkout <commit-hash>"
+    echo "1. Retornar a un commit  anterior sin crear rama temporal   : git reset --hard HEAD~\$numberCommits"
+    echo "2. Eliminar archivos de git cache (.vscode, bin, obj)       : git rm --cached . -rf"
+    echo "3. Encontrar un git en específico sensitive case            : git log --all --oneline --grep='gitName'"
+    echo "4. Ver historial de log de un archivo en específico         : git log -p --follow -- 'fileName'"
+    echo "5. Limpiar ramas locales                                    : git remote prune origin --dry-run"
+    echo "6. Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff"
+    echo "7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
+    echo "8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
     echo "q. Salir"
 }
 
@@ -51,6 +52,12 @@ procesar_opcion() {
             echo "Ingresa la id del commit al que quieres regresar"
             echo "$(git log --oneline --max-count=5)"
             read idCommit
+            echo "$(git checkout $idCommit )"
+            ;;
+        8)
+            echo "Ingresa el numero de commits que deseas ver"
+            read numeroDeCommits
+            echo "$(git log --oneline --max-count=$numeroDeCommits)"
             echo "$(git checkout $idCommit )"
             ;;
         q)
