@@ -118,7 +118,7 @@ opciones_commits() {
             ;;
     esac
 }
-<>
+
 fast_commit() {
     local tipo_commit=$1
     case $tipo_commit in
