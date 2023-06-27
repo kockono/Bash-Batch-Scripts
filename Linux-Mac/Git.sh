@@ -58,6 +58,7 @@ procesar_opcion() {
     esac
 }
 
+# Recibir multiples argumentos para el commit
 fast_commit() {
     local tipo_commit=$1
     local scope=$2
