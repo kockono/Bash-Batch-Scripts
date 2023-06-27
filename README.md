@@ -56,6 +56,7 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc d scope description_commit`| 📝 documentation       |
 | `gitc r scope description_commit`| ⚰️ deadcode             |
 | `gitc s scope description_commit`| 💄 style               |
+| `gitc w scope description_commit`| 🚧 working             |
 
 ### Menu gitc
 ```sh
