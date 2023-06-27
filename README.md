@@ -14,17 +14,16 @@ git clone https://github.com/kockono/Bash-Scripts
 ```
 ### Mac/Linux Users
 ```sh
-sudo cp NetCore.sh /usr/local/bin/netc & 
-cp Angular.sh /usr/local/bin/ngc &
-cp Git.sh /usr/local/bin/gitc &
+sudo cp Git.sh /usr/local/bin/gitc
 ```
+#### Cambia el ``gitc`` si requieres darle permisos a otro script
 
 #### Darle permisos de ejecucion
 ```sh
-chmod +x /usr/local/bin/gitc &
-chmod +x /usr/local/bin/ngc &
-chmod +x /usr/local/bin/netc
+chmod +x /usr/local/bin/gitc 
 ```
+
+#### Cambia el ``gitc`` si requieres darle permisos a otro script
 
 Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 
