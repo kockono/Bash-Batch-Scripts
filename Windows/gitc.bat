@@ -35,5 +35,6 @@ goto :eof
 
 REM Inicio del programa
 :inicio
+REM Sirve para pasar todos los agumentos con espacios %*
 call :fast_commit %*
 goto :eof
