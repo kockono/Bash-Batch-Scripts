@@ -66,3 +66,4 @@ gitc f scripts implementacion de commits rapidos
 gitc t descuentos prueba unitarias
 ```
 ```Output: git add . && git commit -m "test(descuentos): 🧪 prueba unitaria de descuentos" && git push```
+```Final Commit: test(descuentos): 🧪 prueba unitaria de descuentos```
