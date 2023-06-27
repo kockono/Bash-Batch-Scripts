@@ -61,7 +61,8 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 ```sh
 gitc f scripts implementacion de commits rapidos
 ```
-```Output: git add . && git commit -m "feat(scripts): ✨ commits rapidos y bonitos" && git push```
+```Output: git add . && git commit -m "feat(scripts): ✨ commits rapidos y faciles" && git push```
+```Commit: feat(scripts): ✨ commits rapidos y faciles```
 
 #### Test
 ```sh
@@ -69,4 +70,4 @@ gitc t descuentos prueba unitarias
 ```
 ```Output: git add . && git commit -m "test(descuentos): 🧪 prueba unitaria de descuentos" && git push```
 
-```Commit Pov: test(descuentos): 🧪 prueba unitaria de descuentos```
+```Commit: test(descuentos): 🧪 prueba unitaria de descuentos```
