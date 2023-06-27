@@ -23,8 +23,11 @@ if "%tipo_commit%"=="f" (
     echo HotFix:
     git commit -m "hotfix(%2): :ambulance: %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="h" (
-    echo HotFix:
+    echo Style:
     git commit -m "style(%2): 💄 %3 %4 %5 %6 %7 %8 %9" && git push
+) else if "%tipo_commit%"=="w" (
+    echo Working:
+    git commit -m "working(%2): 🚧 %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="q" (
     echo Saliendo del programa...
     exit 0

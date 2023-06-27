@@ -104,6 +104,10 @@ fast_commit() {
             echo "Style"
             echo $(git add . && git commit -m "style($scope): 💄 $description_commit" && git push)
             ;;
+        w)
+            echo "Working"
+            echo $(git add . && git commit -m "working($scope): 🚧 $description_commit" && git push)
+            ;;
         q)
             echo "Saliendo del programa..."
             exit 0
