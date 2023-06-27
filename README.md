@@ -21,7 +21,9 @@ cp Git.sh /usr/local/bin/gitc &
 
 #### Darle permisos de ejecucion
 ```sh
-chmod +x /usr/local/bin/nombre_del_script
+chmod +x /usr/local/bin/gitc &
+chmod +x /usr/local/bin/ngc &
+chmod +x /usr/local/bin/netc
 ```
 
 Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
