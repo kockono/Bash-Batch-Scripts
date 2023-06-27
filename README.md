@@ -62,6 +62,7 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 gitc f scripts implementacion de commits rapidos
 ```
 ```Output: git add . && git commit -m "feat(scripts): ✨ commits rapidos y faciles" && git push```
+
 ```Commit: feat(scripts): ✨ commits rapidos y faciles```
 
 #### Test
