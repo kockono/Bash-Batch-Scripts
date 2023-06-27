@@ -124,31 +124,31 @@ fast_commit() {
     case $tipo_commit in
         f)
             echo "Descripcion del Feature:"
-            echo $(git add . && git commit -m "feat: :sparkles: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "feat($2): :sparkles: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         fx)
             echo "Descripcion del Fix"  
-            echo $(git add . && git commit -m "fix: :bug: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "fix($2): :bug: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         d)
             echo "Descripcion del Documentation"
-            echo $(git add . && git commit -m "docs: :memo: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "docs($2): :memo: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         t)
             echo "Descripcion del Test"
-            echo $(git add . && git commit -m "test: :test_tube: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "test($2): :test_tube: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         r)
             echo "Descripcion del Remove dead code"
-            echo $(git add . && git commit -m "remove: :coffin: $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "remove($2): :coffin: $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         h)
             echo "Descripcion del HotFix"
-            echo $(git add . && git commit -m "hotfix: 🚑 $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "hotfix($2): 🚑 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         s)
             echo "Descripcion del Style"
-            echo $(git add . && git commit -m "style: 💄 $2 $3 $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git add . && git commit -m "style($2): 💄 $3 $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
