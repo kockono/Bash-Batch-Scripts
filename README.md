@@ -67,6 +67,7 @@ Menú de opciones:
 5. Limpiar ramas locales                                    : git remote prune origin --dry-run
 6. Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff
 7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>
+8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits
 q. Salir
 ```
 
