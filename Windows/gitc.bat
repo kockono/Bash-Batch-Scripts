@@ -27,7 +27,7 @@ if "%tipo_commit%"=="f" (
     git commit -m "style(%2): 💄 %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="w" (
     echo Working:
-    git commit -m "working(%2): 🚧 %3 %4 %5 %6 %7 %8 %9" && git push
+    git commit -m "working(%2): :construction: %3 %4 %5 %6 %7 %8 %9" && git push
 ) else if "%tipo_commit%"=="q" (
     echo Saliendo del programa...
     exit 0
