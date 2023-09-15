@@ -14,6 +14,7 @@ mostrar_menu() {
     echo "6. Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff"
     echo "7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
     echo "8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
+    echo "9. Ver los origenes                                         : git remote -v"
     echo "q. Salir"
 }
 
@@ -59,6 +60,9 @@ procesar_opcion() {
             read numeroDeCommits
             echo "$(git log --oneline --max-count=$numeroDeCommits)"
             echo "$(git checkout $idCommit )"
+            ;;
+        9)
+            echo "$(git remote -v)"
             ;;
         q)
             echo "Saliendo del programa..."
