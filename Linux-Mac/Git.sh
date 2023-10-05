@@ -112,6 +112,10 @@ fast_commit() {
             echo "Working"
             echo $(git add . && git commit -m "working($scope): 🚧 $description_commit" && git push)
             ;;
+        w)
+            echo "Dependencies"
+            echo $(git add . && git commit -m "Dependencies($scope): :package: $description_commit" && git push)
+            ;;
         q)
             echo "Saliendo del programa..."
             exit 0
