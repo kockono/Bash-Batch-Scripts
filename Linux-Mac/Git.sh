@@ -15,6 +15,7 @@ mostrar_menu() {
     echo "7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
     echo "8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
     echo "9. Ver los origenes                                         : git remote -v"
+    echo "10. Agregar un nuevo origen                                 : git remote add <name_origin>"
     echo "q. Salir"
 }
 
@@ -62,6 +63,13 @@ procesar_opcion() {
             echo "$(git checkout $idCommit )"
             ;;
         9)
+            echo "Nombre del nuevo origen"
+            read nameOrigin
+            echo "URL del nuevo origen"
+            read urlOrigin
+            echo "$(git remote -v $nameOrigin $urlOrigin)"
+            ;;
+        10)
             echo "$(git remote -v)"
             ;;
         q)
@@ -94,7 +102,7 @@ fast_commit() {
             ;;
         t)
             echo "Test"
-            echo $(git commit -m ":test_tube: test($scope): $description_commit" && git push)
+            echo $(git commit -m "🧪 test($scope): $description_commit" && git push)
             ;;
         r)
             echo "Remove dead code"
@@ -112,9 +120,9 @@ fast_commit() {
             echo "Working"
             echo $(git commit -m "🚧 working($scope): $description_commit" && git push)
             ;;
-        w)
+        p)
             echo "Dependencies"
-            echo $(git commit -m ":package: Dependencies($scope): $description_commit" && git push)
+            echo $(git commit -m "📦 chore($scope): $description_commit" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
