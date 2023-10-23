@@ -142,7 +142,7 @@ fast_commit() {
             echo $(git commit -m "🐛 fix #$issue fix($scope)" && git push)
             ;;
         fixed)
-            echo "Dependencies"
+            echo "Fixed"
             echo $(git commit -m "🐛 fixed #$issue fix($scope)" && git push)
             ;;
         fixes)
