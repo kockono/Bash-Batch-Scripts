@@ -30,7 +30,7 @@ chmod +x /usr/local/bin/gitc
 
 Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 
-### Windows
+## Windows
 ```bat
 @echo off
 set "origen=%CD%"
