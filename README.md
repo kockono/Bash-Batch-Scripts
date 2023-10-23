@@ -108,7 +108,7 @@ gitc t descuentos prueba unitarias
 ```sh
 gitc resolve Descuentos 5 Cupones precios
 ```
-```Output: git commit -m "✨ resolve #5 feat(Descuentos): $4 $5 $6 $7 $8 $9" && git push```
+```Output: git commit -m "✨ resolve #5 (Descuentos): $4 $5 $6 $7 $8 $9" && git push```
 
 ```✨ resolve #5 feat(Descuentos): Cupones precios```
 
