@@ -149,8 +149,6 @@ fast_commit() {
             echo "Dependencies"
             echo $(git commit -m "🐛 fixes #$issue fix($scope): $description_commit" && git push)
             ;;
-
-
         q)
             echo "Saliendo del programa..."
             exit 0
