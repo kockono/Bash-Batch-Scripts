@@ -86,6 +86,7 @@ procesar_opcion() {
 fast_commit() {
     local tipo_commit=$1
     local scope=$2
+    local issue=$3
     local description_commit="$3 $4 $5 $6 $7 $8 $9"
     case $tipo_commit in
         f)
@@ -124,6 +125,32 @@ fast_commit() {
             echo "Dependencies"
             echo $(git commit -m "📦 chore($scope): $description_commit" && git push)
             ;;
+        resolve)
+            echo "Dependencies"
+            echo $(git commit -m "✨ resolve #$issue feat($scope): $description_commit" && git push)
+            ;;
+        resolves)
+            echo "Dependencies"
+            echo $(git commit -m "✨ resolves #$issue feat($scope): $description_commit" && git push)
+            ;;
+        resolved)
+            echo "Dependencies"
+            echo $(git commit -m "✨ resolved #$issue feat($scope): $description_commit" && git push)
+            ;;
+        fix)
+            echo "Dependencies"
+            echo $(git commit -m "🐛 fix #$issue fix($scope): $description_commit" && git push)
+            ;;
+        fixed)
+            echo "Dependencies"
+            echo $(git commit -m "🐛 fixed #$issue fix($scope): $description_commit" && git push)
+            ;;
+        fixes)
+            echo "Dependencies"
+            echo $(git commit -m "🐛 fixes #$issue fix($scope): $description_commit" && git push)
+            ;;
+
+
         q)
             echo "Saliendo del programa..."
             exit 0
