@@ -1,0 +1,59 @@
+{
+  "name": "bash-scripts",
+  "version": "1.0.0",
+  "description": "Conventional commits and close issues ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kockono/Bash-Scripts.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "Chris Isaac Marquez Cobos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kockono/Bash-Scripts/issues"
+  },
+  "homepage": "https://github.com/kockono/Bash-Scripts#readme",
+  "dependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@release-it/conventional-changelog": "^5.0.0",
+    "husky": "^8.0.1",
+    "release-it": "^16.2.1"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
