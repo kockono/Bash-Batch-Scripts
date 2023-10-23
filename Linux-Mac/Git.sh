@@ -85,8 +85,8 @@ procesar_opcion() {
 # Recibir multiples argumentos para el commit
 fast_commit() {
     local tipo_commit=$1
-    local scope=$2
     local issue=$3
+    local scope=$2
     local description_commit="$3 $4 $5 $6 $7 $8 $9"
     case $tipo_commit in
         f)
@@ -126,28 +126,28 @@ fast_commit() {
             echo $(git commit -m "📦 chore($scope): $description_commit" && git push)
             ;;
         resolve)
-            echo "Dependencies"
-            echo $(git commit -m "✨ resolve #$issue feat($scope): $description_commit" && git push)
+            echo "Resolve"
+            echo $(git commit -m "✨ resolve #$issue feat($scope)" && git push)
             ;;
         resolves)
-            echo "Dependencies"
-            echo $(git commit -m "✨ resolves #$issue feat($scope): $description_commit" && git push)
+            echo "Resolves"
+            echo $(git commit -m "✨ resolves #$issue feat($scope)" && git push)
             ;;
         resolved)
-            echo "Dependencies"
-            echo $(git commit -m "✨ resolved #$issue feat($scope): $description_commit" && git push)
+            echo "Resolved"
+            echo $(git commit -m "✨ resolved #$issue feat($scope)" && git push)
             ;;
         fix)
             echo "Dependencies"
-            echo $(git commit -m "🐛 fix #$issue fix($scope): $description_commit" && git push)
+            echo $(git commit -m "🐛 fix #$issue fix($scope)" && git push)
             ;;
         fixed)
             echo "Dependencies"
-            echo $(git commit -m "🐛 fixed #$issue fix($scope): $description_commit" && git push)
+            echo $(git commit -m "🐛 fixed #$issue fix($scope)" && git push)
             ;;
         fixes)
             echo "Dependencies"
-            echo $(git commit -m "🐛 fixes #$issue fix($scope): $description_commit" && git push)
+            echo $(git commit -m "🐛 fixes #$issue fix($scope)" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
