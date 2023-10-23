@@ -56,11 +56,21 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc a scope description_commit` | 🚑 ambulance     |
 | `gitc fx scope description_commit`| 🐛 bug           |
 | `gitc d scope description_commit` | 📝 documentation |
-| `gitc r scope description_commit` | ⚰️ deadcode      |
+| `gitc r scope description_commit` | ⚰️ deadcode       |
 | `gitc s scope description_commit` | 💄 style         |
 | `gitc w scope description_commit` | 🚧 working       |
 | `gitc p scope description_commit` | 📦 dependencies  |
-| `gitc p scope description_commit` | 📦 dependencies  |
+
+### Cerrar commits
+| Git Command                               | Descripción  |
+|-------------------------------------------|--------------|
+| `gitc resolve   scope description_commit` | ✨ resolve   |
+| `gitc resolves  scope description_commit` | ✨ resolves  |
+| `gitc resolved  scope description_commit` | ✨ resolved  |
+| `gitc fix       scope description_commit` | 🐛 fix       |
+| `gitc fixed     scope description_commit` | 🐛 fixed     |
+| `gitc fixes     scope description_commit` | 🐛 fixes     |
+
 
 ### Menu gitc
 ```sh
@@ -93,3 +103,9 @@ gitc t descuentos prueba unitarias
 ```Output: git commit -m "🧪 test(descuentos): prueba unitaria de descuentos" && git push```
 
 ```🧪 test(descuentos): prueba unitaria de descuentos```
+
+#### Commit closed
+```sh
+✨ feat(scripts): commits rapidos y faciles
+```
+
