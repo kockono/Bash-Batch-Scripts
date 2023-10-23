@@ -62,14 +62,14 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc p scope description_commit` | 📦 dependencies  |
 
 ### Cerrar commits
-| Git Command                               | Descripción  |
-|-------------------------------------------|--------------|
-| `gitc resolve   scope description_commit` | ✨ resolve   |
-| `gitc resolves  scope description_commit` | ✨ resolves  |
-| `gitc resolved  scope description_commit` | ✨ resolved  |
-| `gitc fix       scope description_commit` | 🐛 fix       |
-| `gitc fixed     scope description_commit` | 🐛 fixed     |
-| `gitc fixes     scope description_commit` | 🐛 fixes     |
+| Git Command                                     | Descripción  |
+|-------------------------------------------------|--------------|
+| `gitc resolve  scope number description_commit` | ✨ resolve   |
+| `gitc resolves scope number description_commit` | ✨ resolves  |
+| `gitc resolved scope number description_commit` | ✨ resolved  |
+| `gitc fix      scope number description_commit` | 🐛 fix       |
+| `gitc fixed    scope number description_commit` | 🐛 fixed     |
+| `gitc fixes    scope number description_commit` | 🐛 fixes     |
 
 
 ### Menu gitc
