@@ -60,7 +60,6 @@ Use ```netc``` for netcore, ```ngc``` for angular, ```gitc``` for git
 | `gitc s scope description_commit` | 💄 style         |
 | `gitc w scope description_commit` | 🚧 working       |
 | `gitc p scope description_commit` | 📦 dependencies  |
-| `gitc p scope description_commit` | 📦 dependencies  |
 
 ### Menu gitc
 ```sh
