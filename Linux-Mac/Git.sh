@@ -67,7 +67,7 @@ procesar_opcion() {
             read nameOrigin
             echo "URL del nuevo origen"
             read urlOrigin
-            echo "$(git remote -v $nameOrigin $urlOrigin)"
+            echo "$(git add remote $nameOrigin $urlOrigin)"
             ;;
         10)
             echo "$(git remote -v)"
