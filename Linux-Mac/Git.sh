@@ -127,27 +127,27 @@ fast_commit() {
             ;;
         resolve)
             echo "Resolve"
-            echo $(git commit -m "✨ resolve #$issue feat($scope): $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "✨ resolve #$issue ($scope): $4 $5 $6 $7 $8 $9" && git push)
             ;;
         resolves)
             echo "Resolves"
-            echo $(git commit -m "✨ resolves #$issue feat($scope): $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "✨ resolves #$issue ($scope): $4 $5 $6 $7 $8 $9" && git push)
             ;;
         resolved)
             echo "Resolved"
-            echo $(git commit -m "✨ resolved #$issue feat($scope): $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "✨ resolved #$issue ($scope): $4 $5 $6 $7 $8 $9" && git push)
             ;;
         fix)
             echo "Fix"
-            echo $(git commit -m "🐛 fix #$issue fix($scope): $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "🐛 fix #$issue ($scope): $4 $5 $6 $7 $8 $9" && git push)
             ;;
         fixed)
             echo "Fixed"
-            echo $(git commit -m "🐛 fixed #$issue fix($scope): $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "🐛 fixed #$issue ($scope): $4 $5 $6 $7 $8 $9" && git push)
             ;;
         fixes)
             echo "Fixes"
-            echo $(git commit -m "🐛 fixes #$issue fix($scope): $4 $5 $6 $7 $8 $9" && git push)
+            echo $(git commit -m "🐛 fixes #$issue ($scope): $4 $5 $6 $7 $8 $9" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
