@@ -82,39 +82,39 @@ fast_commit() {
     case $tipo_commit in
         f)
             echo "Feature:"
-            echo $(git add . && git commit -m "feat($scope): :sparkles: $description_commit" && git push)
+            echo $(git commit -m ":sparkles: feat($scope): $description_commit" && git push)
             ;;
         fx)
             echo "Fix"  
-            echo $(git add . && git commit -m "fix($scope): :bug: $description_commit" && git push)
+            echo $(git commit -m ":bug: fix($scope): $description_commit" && git push)
             ;;
         d)
             echo "Documentation"
-            echo $(git add . && git commit -m "docs($scope): :memo: $description_commit" && git push)
+            echo $(git commit -m ":memo: docs($scope): $description_commit" && git push)
             ;;
         t)
             echo "Test"
-            echo $(git add . && git commit -m "test($scope): :test_tube: $description_commit" && git push)
+            echo $(git commit -m ":test_tube: test($scope): $description_commit" && git push)
             ;;
         r)
             echo "Remove dead code"
-            echo $(git add . && git commit -m "remove($scope): :coffin: $description_commit" && git push)
+            echo $(git commit -m ":coffin: remove($scope): $description_commit" && git push)
             ;;
         h)
             echo "HotFix"
-            echo $(git add . && git commit -m "hotfix($scope): 🚑 $description_commit" && git push)
+            echo $(git commit -m "🚑 hotfix($scope): $description_commit" && git push)
             ;;
         s)
             echo "Style"
-            echo $(git add . && git commit -m "style($scope): 💄 $description_commit" && git push)
+            echo $(git commit -m "💄 style($scope): $description_commit" && git push)
             ;;
         w)
             echo "Working"
-            echo $(git add . && git commit -m "working($scope): 🚧 $description_commit" && git push)
+            echo $(git commit -m "🚧 working($scope): $description_commit" && git push)
             ;;
         w)
             echo "Dependencies"
-            echo $(git add . && git commit -m "Dependencies($scope): :package: $description_commit" && git push)
+            echo $(git commit -m ":package: Dependencies($scope): $description_commit" && git push)
             ;;
         q)
             echo "Saliendo del programa..."
