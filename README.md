@@ -1,4 +1,12 @@
 # Bash-Bat-Scripts
+## Example
+![code](https://github.com/kockono/Bash-Batch-Scripts/assets/55373948/5b9f64e6-a910-4863-b582-4c1c9ddd56f6)
+
+### Output
+![Sin título](https://github.com/kockono/Bash-Batch-Scripts/assets/55373948/1ca2adfd-4fe9-4494-92f8-46b7d358b97d)
+
+
+
 - [Mac/Linux](#Mac/Linux-Users)
     - Netcore(netc)
     - Angular (ngc)
