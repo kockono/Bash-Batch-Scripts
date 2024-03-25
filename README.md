@@ -1,12 +1,10 @@
 # Bash-Bat-Scripts
-## Example
+### How to use
 ![bash-scripts](https://github.com/kockono/Bash-Batch-Scripts/assets/55373948/a7d7b48a-ed9f-4770-87cb-4c6bb544f499)
 
 
 ### Output
 ![Sin título](https://github.com/kockono/Bash-Batch-Scripts/assets/55373948/47600ce6-cf96-4bb0-b326-51e70327b73c)
-
-
 
 - [Mac/Linux](#Mac/Linux-Users)
     - Netcore(netc)
