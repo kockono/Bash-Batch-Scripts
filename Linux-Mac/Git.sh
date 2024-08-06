@@ -15,7 +15,7 @@ mostrar_menu() {
     echo "7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
     echo "8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
     echo "9. Eliminar ramas mergeadas    locales                      : git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
-    echo "9. Eliminar ramas no mergeadas locales                      : git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D"
+    echo "10. Eliminar ramas no mergeadas locales                     : git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D"
     echo "q. Salir"
 }
 
