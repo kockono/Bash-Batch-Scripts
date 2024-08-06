@@ -14,8 +14,8 @@ mostrar_menu() {
     echo "6. Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff"
     echo "7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
     echo "8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
-    echo "9. Ver los origenes                                         : git remote -v"
-    echo "10. Agregar un nuevo origen                                 : git remote add <name_origin>"
+    echo "9. Eliminar ramas mergeadas    locales                      : git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+    echo "9. Eliminar ramas no mergeadas locales                      : git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D"
     echo "q. Salir"
 }
 
@@ -54,23 +54,19 @@ procesar_opcion() {
             echo "Ingresa la id del commit al que quieres regresar"
             echo "$(git log --oneline --max-count=5)"
             read idCommit
-            echo "$(git checkout $idCommit )"
+            echo "$(git checkout $idCommit)"
             ;;
         8)
             echo "Ingresa el numero de commits que deseas ver"
             read numeroDeCommits
             echo "$(git log --oneline --max-count=$numeroDeCommits)"
-            echo "$(git checkout $idCommit )"
+            echo "$(git checkout $idCommit)"
             ;;
         9)
-            echo "Nombre del nuevo origen"
-            read nameOrigin
-            echo "URL del nuevo origen"
-            read urlOrigin
-            echo "$(git add remote $nameOrigin $urlOrigin)"
+            echo "$(git branch --merged | grep -v "\*" | xargs -n 1 git branch -d)"
             ;;
         10)
-            echo "$(git remote -v)"
+            echo "$(git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D)"
             ;;
         q)
             echo "Saliendo del programa..."
