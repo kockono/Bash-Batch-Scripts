@@ -16,7 +16,7 @@ mostrar_menu() {
     echo "8.  Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
     echo "9.  Eliminar ramas mergeadas    locales                      : git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
     echo "10. Eliminar ramas no mergeadas locales                      : git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D"
-    echo "11. Limpir ramas lovales y de la nube mergeadas              : git remote prune origin --dry-run && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"  
+    echo "11. Limpir ramas locales y mergeadas                         : git remote prune origin --dry-run && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"  
     echo "q. Salir"
 }
 
