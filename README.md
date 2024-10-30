@@ -21,17 +21,12 @@ git clone https://github.com/kockono/Bash-Scripts
 ```
 
 ## Mac/Linux Users
-#### 1. Copiar Archivo
+#### Copiar Archivo y darle permisos de ejecución
 ```sh
-sudo cp Linux-Mac/Git.sh /usr/local/bin/gitc
+sudo cp Linux-Mac/Git.sh /usr/local/bin/gitc && sudo chmod +x /usr/local/bin/gitc
 ```
+Cambiar el ``gitc`` si requieres otro script
 
-###### Cambiar el ``gitc`` si requieres otro script
-
-#### 2. Darle permisos de ejecucion
-```sh
-chmod +x /usr/local/bin/gitc 
-```
 
 ###### Cambiar el ``gitc`` si requieres darle permisos a otro script
 
