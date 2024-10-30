@@ -6,16 +6,17 @@
 # Función para mostrar el menú principal
 mostrar_menu() {
     echo "Menú de opciones:"
-    echo "1. Retornar a un commit  anterior sin crear rama temporal   : git reset --hard HEAD~\$numberCommits"
-    echo "2. Eliminar archivos de git cache (.vscode, bin, obj)       : git rm --cached . -rf"
-    echo "3. Encontrar un git en específico sensitive case            : git log --all --oneline --grep='gitName'"
-    echo "4. Ver historial de log de un archivo en específico         : git log -p --follow -- 'fileName'"
-    echo "5. Limpiar ramas locales                                    : git remote prune origin --dry-run"
-    echo "6. Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff"
-    echo "7. Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
-    echo "8. Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
-    echo "9. Eliminar ramas mergeadas    locales                      : git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
-    echo "10. Eliminar ramas no mergeadas locales                     : git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D"
+    echo "1.  Retornar a un commit  anterior sin crear rama temporal   : git reset --hard HEAD~\$numberCommits"
+    echo "2.  Eliminar archivos de git cache (.vscode, bin, obj)       : git rm --cached . -rf"
+    echo "3.  Encontrar un git en específico sensitive case            : git log --all --oneline --grep='gitName'"
+    echo "4.  Ver historial de log de un archivo en específico         : git log -p --follow -- 'fileName'"
+    echo "5.  Limpiar ramas locales                                    : git remote prune origin --dry-run"
+    echo "6.  Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff"
+    echo "7.  Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
+    echo "8.  Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
+    echo "9.  Eliminar ramas mergeadas    locales                      : git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+    echo "10. Eliminar ramas no mergeadas locales                      : git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D"
+    echo "11. Limpir ramas lovales y de la nube mergeadas              : git remote prune origin --dry-run && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"  
     echo "q. Salir"
 }
 
@@ -67,6 +68,9 @@ procesar_opcion() {
             ;;
         10)
             echo "$(git branch --no-merged | grep -v "\*" | xargs -n 1 git branch -D)"
+            ;;
+        11)
+            echo "$(git remote prune origin --dry-run && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d)"
             ;;
         q)
             echo "Saliendo del programa..."
