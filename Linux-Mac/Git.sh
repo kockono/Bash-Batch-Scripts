@@ -10,7 +10,7 @@ mostrar_menu() {
     echo "2.  Eliminar archivos de git cache (.vscode, bin, obj)       : git rm --cached . -rf"
     echo "3.  Encontrar un git en específico sensitive case            : git log --all --oneline --grep='gitName'"
     echo "4.  Ver historial de log de un archivo en específico         : git log -p --follow -- 'fileName'"
-    echo "5.  Limpiar ramas locales                                    : git remote prune origin --dry-run"
+    echo "5.  Hacer Cherry pick                                        : git cherry-pick <commit_id>"
     echo "6.  Refusing to merge unrelated histories                    : git pull --allow-unrelated-histories --no-ff"
     echo "7.  Retornar a un commit específico (crea una rama temporal) : git checkout <commit-hash>"
     echo "8.  Ver log de numero de commits deseado                     : git log --oneline --max-count=\$numeroDeCommits"
@@ -44,8 +44,9 @@ procesar_opcion() {
             echo "$(git log -p --follow -- $fileName)"
             ;;
         5)
-            echo "Ramas limpiadas con éxito"
-            echo "$(git remote prune origin --dry-run)"
+            echo "Cherry pick requiere el id del commit"
+            read idCommit
+            echo "$(git cherry-pick $idCommit)"
             ;;
         6)
             echo ""
